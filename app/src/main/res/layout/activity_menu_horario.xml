@@ -32,8 +32,11 @@
         android:layout_height="wrap_content"
         android:text="Pesquisar Horarios"
         android:layout_below="@+id/btnCadastrarHorario"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp" />
+        android:layout_marginTop="38dp"
+        android:layout_alignLeft="@+id/btnCadastrarHorario"
+        android:layout_alignStart="@+id/btnCadastrarHorario"
+        android:layout_alignRight="@+id/btnCadastrarHorario"
+        android:layout_alignEnd="@+id/btnCadastrarHorario" />
 
     <Button
         android:id="@+id/btnAtualizarHorario"
@@ -41,8 +44,11 @@
         android:layout_height="wrap_content"
         android:text="Atualizar Horario"
         android:layout_below="@+id/btnPesquisarHorario"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp" />
+        android:layout_marginTop="46dp"
+        android:layout_alignLeft="@+id/btnPesquisarHorario"
+        android:layout_alignStart="@+id/btnPesquisarHorario"
+        android:layout_alignRight="@+id/btnPesquisarHorario"
+        android:layout_alignEnd="@+id/btnPesquisarHorario" />
 
     <Button
         android:layout_width="wrap_content"
@@ -52,7 +58,9 @@
         android:layout_marginTop="41dp"
         android:layout_below="@+id/btnAtualizarHorario"
         android:layout_alignLeft="@+id/btnAtualizarHorario"
-        android:layout_alignStart="@+id/btnAtualizarHorario" />
+        android:layout_alignStart="@+id/btnAtualizarHorario"
+        android:layout_alignRight="@+id/btnAtualizarHorario"
+        android:layout_alignEnd="@+id/btnAtualizarHorario" />
 
 
 </RelativeLayout>

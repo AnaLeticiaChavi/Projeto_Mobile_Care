@@ -31,62 +31,64 @@
     </EditText>
 
     <EditText
-        android:id="@+id/txtDosagemMedicamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtNomeMedicamento"
-        android:layout_below="@+id/txtNomeMedicamento"
-        android:layout_marginTop="19dp"
-        android:ems="10"
-        android:hint="Dosagem" />
-
-    <EditText
-        android:id="@+id/txtDataIni"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDosagemMedicamento"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:ems="10"
-        android:hint="Data de Início de Uso" />
-
-    <EditText
-        android:id="@+id/txtDataFim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtDataIni"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
-        android:ems="10"
-        android:hint="Data de Término de Uso" />
-
-    <EditText
         android:id="@+id/txtTarja"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtDataFim"
-        android:layout_below="@+id/txtDataFim"
-        android:layout_marginTop="19dp"
         android:ems="10"
-        android:hint="Tarja de Medicamento" />
-
-    <EditText
-        android:id="@+id/txtObs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtTarja"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:ems="10"
-        android:hint="Observações"
-        android:inputType="textMultiLine" />
+        android:hint="Tarja de Medicamento"
+        android:layout_alignLeft="@+id/txtNomeMedicamento"
+        android:layout_below="@+id/txtDataFim" />
 
     <Button
         android:id="@+id/btnCadMedBD"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:text="Cadastrar"
+        android:layout_below="@+id/txtObs"
         android:layout_centerHorizontal="true"
-        android:text="Cadastrar" />
+        android:layout_marginTop="67dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txtDosagemMedicamento"
+        android:layout_below="@+id/txtNomeMedicamento"
+        android:layout_alignLeft="@+id/txtCadastroDeMedicamento"
+        android:layout_alignStart="@+id/txtCadastroDeMedicamento"
+        android:hint="Dosagem" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/txtDataIni"
+        android:layout_below="@+id/txtDosagemMedicamento"
+        android:layout_alignLeft="@+id/txtDosagemMedicamento"
+        android:layout_alignStart="@+id/txtDosagemMedicamento"
+        android:hint="Data de Inicio" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/txtDataFim"
+        android:layout_below="@+id/txtDataIni"
+        android:layout_centerHorizontal="true"
+        android:hint="Data de fim" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtObs"
+        android:layout_below="@+id/txtTarja"
+        android:layout_alignLeft="@+id/txtDataIni"
+        android:layout_alignStart="@+id/txtDataIni"
+        android:hint="Obs"
+        android:layout_alignRight="@+id/txtCadastroDeMedicamento"
+        android:layout_alignEnd="@+id/txtCadastroDeMedicamento" />
 
 </RelativeLayout>
