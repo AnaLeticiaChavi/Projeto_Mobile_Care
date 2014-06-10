@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="mobilecare.app.MenuHorario">
+
+    <TextView
+        android:id="@+id/txtMenuHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Menu de Horários" />
+
+    <Button
+        android:id="@+id/btnCadastrarHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtMenuMedicamento"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:text="Cadastrar novo Horário" />
+
+    <Button
+        android:id="@+id/btnPesquisarHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesquisar Horarios"
+        android:layout_below="@+id/btnCadastrarHorario"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp" />
+
+    <Button
+        android:id="@+id/btnAtualizarHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atualizar Horario"
+        android:layout_below="@+id/btnPesquisarHorario"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remover Horário"
+        android:id="@+id/btnRemoverHorario"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/btnAtualizarHorario"
+        android:layout_alignLeft="@+id/btnAtualizarHorario"
+        android:layout_alignStart="@+id/btnAtualizarHorario" />
+
+
+</RelativeLayout>
