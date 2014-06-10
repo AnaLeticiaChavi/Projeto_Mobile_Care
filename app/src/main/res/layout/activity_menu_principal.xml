@@ -30,27 +30,33 @@
         android:id="@+id/btnHorario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Manter Horários"
         android:layout_below="@+id/btnMedicamento"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
-        android:text="Manter Horários" />
+        android:layout_alignLeft="@+id/btnMedicamento"
+        android:layout_alignStart="@+id/btnMedicamento"
+        android:layout_alignRight="@+id/btnMedicamento"
+        android:layout_alignEnd="@+id/btnMedicamento" />
 
     <Button
         android:id="@+id/btnEstoque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/btnHorario"
+        android:text="Manter Estoque"
+        android:layout_alignStart="@+id/btnHorario"
         android:layout_below="@+id/btnHorario"
-        android:layout_marginTop="38dp"
-        android:text="Manter Estoque" />
+        android:layout_alignLeft="@+id/btnMedicamento"
+        android:layout_alignRight="@+id/btnMedicamento"
+        android:layout_alignEnd="@+id/btnMedicamento" />
 
     <Button
         android:id="@+id/btnRelatorio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/btnEstoque"
-        android:layout_marginBottom="38dp"
-        android:text="Gerar Relatórios" />
+        android:text="Gerar Relatórios"
+        android:layout_alignStart="@+id/btnEstoque"
+        android:layout_below="@+id/btnEstoque"
+        android:layout_alignLeft="@+id/btnMedicamento"
+        android:layout_alignRight="@+id/btnMedicamento"
+        android:layout_alignEnd="@+id/btnMedicamento" />
 
 </RelativeLayout>
