@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ProjetomobileCare</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu_principal">MenuPrincipal</string>
+    <string name="title_activity_main_activity2">MainActivity2</string>
+    <string name="title_activity_menu_medicamento">MenuMedicamento</string>
+    <string name="title_activity_cadastro_medicamento">CadastroMedicamento</string>
+    <string name="title_activity_pesquisar_medicamento">PesquisarMedicamento</string>
+    <string name="title_activity_atualizar_medicamento">AtualizarMedicamento</string>
+    <string name="title_activity_remover_medicamento">RemoverMedicamento</string>
+    <string name="title_activity_cadastrar_horario">CadastrarHorario</string>
+    <string name="title_activity_menu_horario">MenuHorario</string>
+    <string name="title_activity_pesquisar_horario">PesquisarHorario</string>
+    <string name="title_activity_atualizar">Atualizar</string>
+    <string name="title_activity_atualizar_horario">AtualizarHorario</string>
+    <string name="title_activity_remover_horario">RemoverHorario</string>
+    <string name="title_activity_cadastrar_estoque">CadastrarEstoque</string>
+    <string name="title_activity_menu_estoque">MenuEstoque</string>
+    <string name="title_activity_pesquisar_estoque">PesquisarEstoque</string>
+    <string name="title_activity_atualizar_estoque">AtualizarEstoque</string>
+    <string name="title_activity_remover_estoque">RemoverEstoque</string>
+
+</resources>

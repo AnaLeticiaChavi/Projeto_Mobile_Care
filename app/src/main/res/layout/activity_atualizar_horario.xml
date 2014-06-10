@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="mobilecare.app.AtualizarHorario">
+
+    <TextView
+        android:id="@+id/txtAtualizarMedicamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="111dp"
+        android:layout_marginTop="26dp"
+        android:text="Atualizar Medicamento" />
+
+    <EditText
+        android:id="@+id/txtNomeMedAtualizarHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtAtualizarMedicamento"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="Nome do medicamento" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnAtualizacaoHorario"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtNomeMedAtualizarHorario"
+        android:layout_alignBottom="@+id/txtNomeMedAtualizarHorario"
+        android:layout_toRightOf="@+id/txtAtualizarMedicamento"
+        android:text="OK" />
+
+    <EditText
+        android:id="@+id/txtTituloAtualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAtualizacaoHorario"
+        android:layout_toLeftOf="@+id/btnAtualizacaoHorario"
+        android:ems="10"
+        android:hint="Titulo" />
+
+    <EditText
+        android:id="@+id/txtDataAtualizaHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Data"
+        android:layout_below="@+id/txtTituloAtualiza"
+        android:layout_alignLeft="@+id/txtTituloAtualiza"
+        android:layout_alignStart="@+id/txtTituloAtualiza" />
+
+    <EditText
+        android:id="@+id/txtHoraAtualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Hora"
+        android:layout_below="@+id/txtDataAtualizaHorario"
+        android:layout_alignRight="@+id/txtAtualizarMedicamento"
+        android:layout_alignEnd="@+id/txtAtualizarMedicamento" />
+
+    <EditText
+        android:id="@+id/txtPeriodoAtualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtHoraAtualiza"
+        android:layout_toLeftOf="@+id/btnAtualizacaoHorario"
+        android:ems="10"
+        android:hint="Periodo" />
+
+    <EditText
+        android:id="@+id/txtMedAtualizaHor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtPeriodoAtualiza"
+        android:layout_toLeftOf="@+id/btnAtualizacaoHorario"
+        android:ems="10"
+        android:hint="Nome do Medicamento" />
+
+    <Button
+        android:id="@+id/btnAtualizaHorBD"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtMedAtualizaHor"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="Atualizar" />
+
+</RelativeLayout>

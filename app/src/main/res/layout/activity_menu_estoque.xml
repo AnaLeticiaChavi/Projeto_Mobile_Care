@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="mobilecare.app.MenuEstoque">
+
+    <TextView
+        android:id="@+id/txtMenuestoque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="Menu de Estoque" />
+
+    <Button
+        android:id="@+id/btnCadastrarEstoque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtMenuMedicamento"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:text="Cadastrar novo medicamento no estoque" />
+
+    <Button
+        android:id="@+id/btnPesquisarEstoque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesquisar medicamento no estoque"
+        android:layout_below="@+id/btnCadastrarEstoque"
+        android:layout_alignLeft="@+id/btnAtualizarEstoque"
+        android:layout_alignStart="@+id/btnAtualizarEstoque" />
+
+    <Button
+        android:id="@+id/btnAtualizarEstoque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Atualizar Estoque de um medicamento"
+        android:layout_below="@+id/btnPesquisarEstoque"
+        android:layout_alignRight="@+id/btnCadastrarEstoque"
+        android:layout_alignEnd="@+id/btnCadastrarEstoque" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remover Medicamento do estoque"
+        android:id="@+id/btnRemoverEstoque"
+        android:layout_below="@+id/btnAtualizarEstoque"
+        android:layout_alignRight="@+id/btnPesquisarEstoque"
+        android:layout_alignEnd="@+id/btnRemoverEstoque" />
+
+
+</RelativeLayout>
