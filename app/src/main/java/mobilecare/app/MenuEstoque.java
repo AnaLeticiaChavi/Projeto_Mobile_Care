@@ -34,7 +34,10 @@ public class MenuEstoque extends Activity implements OnClickListener {
         btnAtEstoqueBD = (Button)findViewById(R.id.btnAtualizarEstoque);
         btnAtEstoqueBD.setOnClickListener(this);
 
-
+        mudarTelaCadastroEst = new Intent(this, CadastrarEstoque.class);
+        mudarTelaPesquisaEst = new Intent(this, PesquisarEstoque.class);
+        mudarTelaRemoverEst = new Intent(this,RemoverEstoque.class);
+        mudarTelaAlterarEst = new Intent(this,AtualizarEstoque.class);
     }
 
 
