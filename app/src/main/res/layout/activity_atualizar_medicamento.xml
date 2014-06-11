@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="mobilecare.app.AtualizarMedicamento">
+
+    <TextView
+        android:id="@+id/txtAtualizarMedicamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="111dp"
+        android:layout_marginTop="26dp"
+        android:text="Atualizar Medicamento" />
+
+    <EditText
+        android:id="@+id/txtNomeAtualizaMedicamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtAtualizarMedicamento"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="Nome do medicamento" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnAtualizacaoMedicamento"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtNomeAtualizaMedicamento"
+        android:layout_alignBottom="@+id/txtNomeAtualizaMedicamento"
+        android:layout_toRightOf="@+id/txtAtualizarMedicamento"
+        android:text="OK" />
+
+    <EditText
+        android:id="@+id/txtNomeAtualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnAtualizacaoMedicamento"
+        android:layout_toLeftOf="@+id/btnAtualizacaoMedicamento"
+        android:ems="10"
+        android:hint="Nome" />
+
+    <EditText
+        android:id="@+id/txtDosagemAtualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Dosagem"
+        android:layout_below="@+id/txtNomeAtualiza"
+        android:layout_alignLeft="@+id/txtNomeAtualiza"
+        android:layout_alignStart="@+id/txtNomeAtualiza" />
+
+    <EditText
+        android:id="@+id/txtDataIniAtualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDosagemAtualiza"
+        android:layout_toLeftOf="@+id/btnAtualizacaoMedicamento"
+        android:ems="10"
+        android:hint="Data de inicio" />
+
+    <EditText
+        android:id="@+id/txtDataFimAtualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Data de fim"
+        android:layout_below="@+id/txtDataIniAtualiza"
+        android:layout_alignLeft="@+id/txtDataIniAtualiza"
+        android:layout_alignStart="@+id/txtDataIniAtualiza" />
+
+    <EditText
+        android:id="@+id/txtTarjaAtualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDataFimAtualiza"
+        android:layout_toLeftOf="@+id/btnAtualizacaoMedicamento"
+        android:ems="10"
+        android:hint="Tarja" />
+
+    <EditText
+        android:id="@+id/txtObsAtualiza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtTarjaAtualiza"
+        android:layout_toLeftOf="@+id/btnAtualizacaoMedicamento"
+        android:ems="10"
+        android:hint="Obs" />
+
+    <Button
+        android:id="@+id/btnAtualizaMedBD"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtObsAtualiza"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:text="Atualizar" />
+
+</RelativeLayout>
