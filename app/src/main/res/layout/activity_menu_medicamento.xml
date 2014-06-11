@@ -30,26 +30,36 @@
         android:id="@+id/btnPesquisarMedicamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Pesquisar Medicamentos" />
+        android:text="Pesquisar Medicamentos"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/btnCadastrarMedicamento"
+        android:layout_alignStart="@+id/btnCadastrarMedicamento"
+        android:layout_alignRight="@+id/btnCadastrarMedicamento"
+        android:layout_alignEnd="@+id/btnCadastrarMedicamento" />
 
     <Button
         android:id="@+id/btnAtualizarMedicamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnPesquisarMedicamento"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:text="Atualizar Medicamento" />
+        android:text="Atualizar Medicamento"
+        android:layout_alignLeft="@+id/btnPesquisarMedicamento"
+        android:layout_alignStart="@+id/btnPesquisarMedicamento"
+        android:layout_alignRight="@+id/btnCadastrarMedicamento"
+        android:layout_alignEnd="@+id/btnCadastrarMedicamento" />
 
     <Button
         android:id="@+id/btnRemoverMedicamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnAtualizarMedicamento"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:text="Remover Medicamento" />
+        android:text="Remover Medicamento"
+        android:layout_alignLeft="@+id/btnAtualizarMedicamento"
+        android:layout_alignStart="@+id/btnAtualizarMedicamento"
+        android:layout_alignRight="@+id/btnAtualizarMedicamento"
+        android:layout_alignEnd="@+id/btnAtualizarMedicamento" />
 
 
 </RelativeLayout>

@@ -27,13 +27,66 @@
             android:name="mobilecare.app.MenuMedicamento"
             android:label="@string/title_activity_menu_medicamento" >
         </activity>
-
-
+        <activity
+            android:name="mobilecare.app.CadastroMedicamento"
+            android:label="@string/title_activity_cadastro_medicamento" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.PesquisarMedicamento"
+            android:label="@string/title_activity_pesquisar_medicamento" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.AtualizarMedicamento"
+            android:label="@string/title_activity_atualizar_medicamento" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.RemoverMedicamento"
+            android:label="@string/title_activity_remover_medicamento" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.CadastrarHorario"
+            android:label="@string/title_activity_cadastrar_horario" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.MenuHorario"
+            android:label="@string/title_activity_menu_horario" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.PesquisarHorario"
+            android:label="@string/title_activity_pesquisar_horario" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.Atualizar"
+            android:label="@string/title_activity_atualizar" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.AtualizarHorario"
+            android:label="@string/title_activity_atualizar_horario" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.RemoverHorario"
+            android:label="@string/title_activity_remover_horario" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.CadastrarEstoque"
+            android:label="@string/title_activity_cadastrar_estoque" >
+        </activity>
         <activity
             android:name="mobilecare.app.MenuEstoque"
             android:label="@string/title_activity_menu_estoque" >
         </activity>
-
+        <activity
+            android:name="mobilecare.app.PesquisarEstoque"
+            android:label="@string/title_activity_pesquisar_estoque" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.AtualizarEstoque"
+            android:label="@string/title_activity_atualizar_estoque" >
+        </activity>
+        <activity
+            android:name="mobilecare.app.RemoverEstoque"
+            android:label="@string/title_activity_remover_estoque" >
+        </activity>
     </application>
 
 </manifest>

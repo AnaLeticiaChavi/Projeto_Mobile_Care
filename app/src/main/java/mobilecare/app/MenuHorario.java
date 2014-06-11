@@ -34,7 +34,10 @@ public class MenuHorario extends Activity implements OnClickListener {
         btnAtHorarioBD = (Button)findViewById(R.id.btnAtualizarHorario);
         btnAtHorarioBD.setOnClickListener(this);
 
-
+        mudarTelaCadastroHor = new Intent(this, CadastrarHorario.class);
+        mudarTelaPesquisaHor = new Intent(this, PesquisarHorario.class);
+        mudarTelaRemoverHor = new Intent(this,RemoverHorario.class);
+        mudarTelaAlterarHor = new Intent(this,AtualizarHorario.class);
     }
 
 

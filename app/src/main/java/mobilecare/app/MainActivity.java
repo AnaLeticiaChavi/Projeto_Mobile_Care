@@ -27,6 +27,7 @@ public class MainActivity extends Activity {
         database = this.openOrCreateDatabase(CAMINHO + "/" + BANCO, 0, null);
 
         //Criando as tabelas se elas ainda não existirem
+
         database.execSQL("create table if not exists Medicamento(codMed integer primary key autoincrement, nome text not null, dosagem real not null, status integer not null, dataIni text not null, dataFim text, tarja text not null, obs text);");
         database.execSQL("create table if not exists Horario(codHor integer primary key autoincrement, titulo text not null, data text not null, hora text not null, periodo integer not null,codMed integer not null, foreign key(codMed) references Medicamento(codMed));");
         database.execSQL("create table if not exists Estoque(codEst integer primary key autoincrement, dataCompra text not null, qtdCartela integer not null, dataValidade text not null,codMed integer not null,codHor integer not null, foreign key(codMed) references Medicamento(codMed), foreign key(codHor) references Horario(codHor));");

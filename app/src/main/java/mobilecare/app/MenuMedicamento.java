@@ -35,7 +35,10 @@ public class MenuMedicamento extends Activity implements OnClickListener   {
         btnAtMedicamentoBD = (Button)findViewById(R.id.btnAtualizarMedicamento);
         btnAtMedicamentoBD.setOnClickListener(this);
 
-
+        mudarTelaCadastroMed = new Intent(this, CadastroMedicamento.class);
+        mudarTelaPesquisaMed = new Intent(this, PesquisarMedicamento.class);
+        mudarTelaRemoverMed = new Intent(this,RemoverMedicamento.class);
+        mudarTelaAlterarMed = new Intent(this,AtualizarMedicamento.class);
     }
 
 
