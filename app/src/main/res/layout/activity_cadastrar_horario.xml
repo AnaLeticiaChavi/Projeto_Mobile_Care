@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="mobilecare.app.CadastrarHorario">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar Horário"
+        android:id="@+id/txtCadastrarHorario"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/txtHoraCadHorario"
+        android:hint="Hora"
+        android:layout_below="@+id/txtDataCadHorario"
+        android:layout_alignRight="@+id/txtCadastrarHorario"
+        android:layout_alignEnd="@+id/txtCadastrarHorario" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTituloCadHorario"
+        android:layout_below="@+id/txtCadastrarHorario"
+        android:layout_alignLeft="@+id/txtHoraCadHorario"
+        android:layout_alignStart="@+id/txtHoraCadHorario"
+        android:layout_marginTop="44dp"
+        android:hint="Titulo"
+        android:layout_alignRight="@+id/txtCadastrarHorario"
+        android:layout_alignEnd="@+id/txtCadastrarHorario"
+        android:layout_gravity="center" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/txtDataCadHorario"
+        android:hint="Data"
+        android:layout_below="@+id/txtTituloCadHorario"
+        android:layout_alignLeft="@+id/txtTituloCadHorario"
+        android:layout_alignStart="@+id/txtTituloCadHorario" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/txtPeriodoCadHorario"
+        android:layout_below="@+id/txtHoraCadHorario"
+        android:layout_alignLeft="@+id/txtHoraCadHorario"
+        android:layout_alignStart="@+id/txtHoraCadHorario"
+        android:hint="Periodo" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cadastrar"
+        android:id="@+id/btnCadastrarHorario"
+        android:layout_marginTop="98dp"
+        android:layout_gravity="center"
+        android:layout_below="@+id/txtPeriodoCadHorario"
+        android:layout_alignRight="@+id/txtPeriodoCadHorario"
+        android:layout_alignEnd="@+id/txtPeriodoCadHorario" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNomeMedCadHorario"
+        android:hint="Nome do Medicamento"
+        android:layout_below="@+id/txtPeriodoCadHorario"
+        android:layout_alignLeft="@+id/txtPeriodoCadHorario"
+        android:layout_alignStart="@+id/txtPeriodoCadHorario" />
+
+</RelativeLayout>
