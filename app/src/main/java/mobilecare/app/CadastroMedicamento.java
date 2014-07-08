@@ -41,16 +41,16 @@ public class CadastroMedicamento extends Activity implements OnClickListener {
 
             verifica = BD.InserirMedicamento(txtNome.getText().toString(), Double.parseDouble(txtDosagem.getText().toString()), 1, txtDataIniBD.getText().toString(), txtDataFimBD.getText().toString(), txtTarjaBD.getText().toString(), txtObsBD.getText().toString());
 
-            if(verifica == 1){
+           if(verifica == 1){
                 new AlertDialog.Builder(this)
                         .setMessage("Medicamento Cadastrado com sucesso")
                         .show();
             }
-            else{
+           else{
                 new AlertDialog.Builder(this)
                         .setMessage("Falha no cadastro do medicamento")
                         .show();
-            }
+           }
         }
 
     }

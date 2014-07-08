@@ -8,7 +8,10 @@ import java.util.ArrayList;
 
 public class OperacoesBD {
 
-    public int InserirMedicamento(String nome, double dosagem, int status, String dataIni, String dataFim, String tarja, String obs){
+    String DataInicialDeUso;
+
+    public int InserirMedicamento(String nome, double dosagem, int status, String dataIni, String dataFim, String tarja, String obs) {
+
 
         ContentValues contentValues = new ContentValues();
         contentValues.put("nome", nome);
@@ -19,6 +22,11 @@ public class OperacoesBD {
         contentValues.put("tarja", tarja);
         contentValues.put("obs", obs);
 
+        Cursor dadoData = MainActivity.database.rawQuery("select * from Medicamento",null);
+        dadoData.moveToFirst();
+        if(dadoData == null){
+            DataInicialDeUso = dataIni;
+        }
 
         if (contentValues == null) {
             throw new IllegalArgumentException("Os dados não podem estar vazio");
@@ -28,8 +36,8 @@ public class OperacoesBD {
             return 1;
         } catch (SQLException e) {
             return 0;
-
         }
+
 
     }
 
@@ -118,7 +126,6 @@ public class OperacoesBD {
         contentValues.put("periodo", periodoBD);
 
 
-
         try {
             Cursor dadoMed = MainActivity.database.rawQuery("select codMed from Medicamento where nome = ? and status = ?", new String[]{nomeMedBD, "1"});
             if (dadoMed.moveToFirst()) {
@@ -144,30 +151,30 @@ public class OperacoesBD {
 
     }
 
-    public String PesquisarHorario(String nomeMed){
+    public String PesquisarHorario(String nomeMed) {
 
         String saida = null;
 
-        try{
-            Cursor dadosHorarios = MainActivity.database.rawQuery("select * from Horario h inner join Medicamento m on h.codMed = m.codMed where m.nome = ?", new String[]{nomeMed} );
-            if(dadosHorarios.moveToFirst()){
-                saida = "Titulo: "+ dadosHorarios.getString(1) + "\n" +
-                        "Data: " + dadosHorarios.getString(2) + "\n"+
+        try {
+            Cursor dadosHorarios = MainActivity.database.rawQuery("select * from Horario h inner join Medicamento m on h.codMed = m.codMed where m.nome = ?", new String[]{nomeMed});
+            if (dadosHorarios.moveToFirst()) {
+                saida = "Titulo: " + dadosHorarios.getString(1) + "\n" +
+                        "Data: " + dadosHorarios.getString(2) + "\n" +
                         "Hora: " + dadosHorarios.getString(3) + "\n" +
                         "Periodo: " + dadosHorarios.getInt(4) + "\n";
             }
             return saida;
-        }
-        catch(SQLException e){
+        } catch (SQLException e) {
             return null;
         }
     }
-    public ArrayList<String> PesquisarHorario_Atualizar(String nomeMed){
+
+    public ArrayList<String> PesquisarHorario_Atualizar(String nomeMed) {
 
         ArrayList<String> saida = new ArrayList();
-        try{
-            Cursor dadosHorarios = MainActivity.database.rawQuery("select h.*,m.nome from Horario h inner join Medicamento m on h.codMed = m.codMed where m.nome = ?", new String[]{nomeMed} );
-            if(dadosHorarios.moveToFirst()){
+        try {
+            Cursor dadosHorarios = MainActivity.database.rawQuery("select h.*,m.nome from Horario h inner join Medicamento m on h.codMed = m.codMed where m.nome = ?", new String[]{nomeMed});
+            if (dadosHorarios.moveToFirst()) {
                 saida.add(dadosHorarios.getString(0));
                 saida.add(dadosHorarios.getString(1));
                 saida.add(dadosHorarios.getString(2));
@@ -178,12 +185,12 @@ public class OperacoesBD {
 
             }
             return saida;
-        }
-        catch(SQLException e){
+        } catch (SQLException e) {
             return null;
         }
     }
-    public int AtualizarHorario(String codHorario, String titulo, String data, String hora, int periodo, String nomeMed ) {
+
+    public int AtualizarHorario(String codHorario, String titulo, String data, String hora, int periodo, String nomeMed) {
         ContentValues contentValues = new ContentValues();
         int codMed = 0;
         try {
@@ -209,24 +216,23 @@ public class OperacoesBD {
             return 0;
         }
     }
-    public int RemoverHorario(String codigo){
+
+    public int RemoverHorario(String codigo) {
 
         try {
             MainActivity.database.delete("Horario", "codHor = ?", new String[]{codigo});
             return 1;
-        }
-        catch(SQLException e){
+        } catch (SQLException e) {
             return 0;
         }
     }
 
-    public int CadastrarEstoque(String dataCompra, int qtdCartela, String dataValidade,String nomeMed){
+    public int CadastrarEstoque(String dataCompra, int qtdCartela, String dataValidade, String nomeMed) {
         int i = 0, codMed = 0, codHorario = 0;
 
         ContentValues contentValues = new ContentValues();
-        contentValues.put("codEst", i);
         contentValues.put("dataCompra", dataCompra);
-        contentValues.put("qtdCartela",qtdCartela);
+        contentValues.put("qtdCartela", qtdCartela);
         contentValues.put("dataValidade", dataValidade);
         try {
             Cursor dados = MainActivity.database.rawQuery("select h.codHor,m.codMed from Horario h inner join Medicamento m on h.codMed = m.codMed where m.nome = ?", new String[]{nomeMed});
@@ -236,52 +242,52 @@ public class OperacoesBD {
                 contentValues.put("codMed", codMed);
                 contentValues.put("codHor", codHorario);
             }
-        }catch(SQLException e) {
+        } catch (SQLException e) {
             throw new IllegalArgumentException("Medicamento não cadastrado no sistema");
         }
-        if(contentValues == null) {
+        if (contentValues == null) {
             throw new IllegalArgumentException("Medicamento não cadastrado no sistema");
         }
 
-        try{
+        try {
             MainActivity.database.insert("Estoque", null, contentValues);
             return 1;
-        }
-        catch(SQLException e){
+        } catch (SQLException e) {
             return 0;
         }
 
     }
-    public String PesquisarEstoque(String nomeMed){
+
+    public String PesquisarEstoque(String nomeMed) {
 
         String saida = null;
 
-        try{
+        try {
 
-            Cursor dadosEstoque = MainActivity.database.rawQuery("select e.*, m.nome, h.titulo from Estoque e inner join Horario h on e.codHor = h.codHor join Medicamento m on h.codMed = m.codMed where m.nome = ?", new String[]{nomeMed} );
+            Cursor dadosEstoque = MainActivity.database.rawQuery("select e.*, m.nome, h.titulo from Estoque e inner join Horario h on e.codHor = h.codHor join Medicamento m on h.codMed = m.codMed where m.nome = ?", new String[]{nomeMed});
 
-            if(dadosEstoque.moveToFirst()){
+            if (dadosEstoque.moveToFirst()) {
 
-                saida = "Data da Compra: "+ dadosEstoque.getString(1) + "\n" +
-                        "Quantidade na cartela: " + dadosEstoque.getInt(2) + "\n"+
+                saida = "Data da Compra: " + dadosEstoque.getString(1) + "\n" +
+                        "Quantidade na cartela: " + dadosEstoque.getInt(2) + "\n" +
                         "Data de Validade: " + dadosEstoque.getString(3) + "\n" +
                         "Nome do medicamento: " + dadosEstoque.getString(6) + "\n";
 
 
             }
             return saida;
-        }
-        catch(SQLException e){
+        } catch (SQLException e) {
             return null;
         }
     }
-    public ArrayList<String> PesquisarEstoque_Atualizar(String nomeMed){
+
+    public ArrayList<String> PesquisarEstoque_Atualizar(String nomeMed) {
 
         ArrayList<String> saida = new ArrayList();
-        try{
+        try {
             Cursor dadosEstoque = MainActivity.database.rawQuery("select e.*, m.nome from Estoque e inner join Medicamento m on e.codMed = m.codMed where m.nome = ?", new String[]{nomeMed});
 
-            if(dadosEstoque.moveToFirst()){
+            if (dadosEstoque.moveToFirst()) {
                 saida.add(dadosEstoque.getString(0));
                 saida.add(dadosEstoque.getString(1));
                 saida.add(dadosEstoque.getString(2));
@@ -290,20 +296,20 @@ public class OperacoesBD {
 
             }
             return saida;
-        }
-        catch(SQLException e){
+        } catch (SQLException e) {
             return null;
         }
     }
-    public int AtualizarEstoque(String codEstoque, String DataC, int qtd, String dataV, String nomeMed ) {
+
+    public int AtualizarEstoque(String codEstoque, String DataC, int qtd, String dataV, String nomeMed) {
         ContentValues contentValues = new ContentValues();
         int codMed = 0, codHorario = 0;
         try {
 
             Cursor dadoMed = MainActivity.database.rawQuery("select h.codHor,m.codMed from Horario h inner join Medicamento m on h.codMed = m.codMed where m.nome = ?", new String[]{nomeMed});
             if (dadoMed.moveToFirst()) {
-                codMed = dadoMed.getInt(0);
-                codHorario  = dadoMed.getInt(1);
+                codMed = dadoMed.getInt(1);
+                codHorario = dadoMed.getInt(0);
             }
 
             contentValues.put("dataCompra", DataC);
@@ -321,14 +327,54 @@ public class OperacoesBD {
             return 0;
         }
     }
-    public int RemoverEstoque(String codigo){
+
+    public int RemoverEstoque(String codigo) {
         try {
             MainActivity.database.delete("Estoque", "codEst = ?", new String[]{codigo});
             return 1;
-        }
-        catch(SQLException e){
+        } catch (SQLException e) {
             return 0;
         }
 
     }
+
+    public String relatorioMedicamentoxMes(String mes,String ano) {
+
+        Cursor dadosRelatorio;
+        String saida = mes + " / "+ano +": ";
+
+        try {
+            dadosRelatorio = MainActivity.database.rawQuery("select nome from Medicamento where dataIni like '%/"+mes+"/"+ano+"' or dataFim like '%/"+mes+"/"+ano+"'", null);
+
+            if(dadosRelatorio.moveToFirst()) {
+                while(dadosRelatorio.moveToNext()){
+                  saida += dadosRelatorio.getString(0) +"\n";
+
+                }
+
+            }
+            return saida;
+
+        } catch (SQLException e) {
+            return null;
+        }
+    }
+
+    public double relatorioDosagemxMes(String mes,String ano) {
+
+        Cursor dadosRelatorio;
+
+        try {
+            dadosRelatorio = MainActivity.database.rawQuery("select sum(dosagem) from Medicamento where dataIni like '%/"+mes+"/"+ano+"' or dataFim like '%/"+mes+"/"+ano+"'", null);
+
+            dadosRelatorio.moveToFirst();
+            return dadosRelatorio.getDouble(0);
+
+        } catch (SQLException e) {
+            return -1;
+        }
+    }
 }
+
+
+

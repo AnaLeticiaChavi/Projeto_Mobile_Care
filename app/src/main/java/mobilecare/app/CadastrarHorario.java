@@ -2,7 +2,9 @@ package mobilecare.app;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.AlarmClock;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -43,6 +45,20 @@ public class CadastrarHorario extends Activity implements OnClickListener {
                     new AlertDialog.Builder(this)
                             .setMessage("Horário Cadastrado com sucesso")
                             .show();
+
+                    for(int j = 0; j<3; j++) {
+                        Intent i = new Intent(AlarmClock.ACTION_SET_ALARM);
+                        if(j==0){
+                            i.putExtra(AlarmClock.EXTRA_HOUR, Integer.parseInt(txtCadHoraHor.getText().toString().substring(0,2)));
+                        }
+                        else{
+                            i.putExtra(AlarmClock.EXTRA_HOUR, Integer.parseInt(txtCadHoraHor.getText().toString().substring(0,2)) + Integer.parseInt("0"+txtCadPeriodoHor.getText().toString()));
+                        }
+                        i.putExtra(AlarmClock.EXTRA_MINUTES, (Integer.parseInt(txtCadHoraHor.getText().toString().substring(3,5))));
+                        i.putExtra(AlarmClock.EXTRA_MESSAGE, txtCadTituloHor.getText().toString());
+                        startActivity(i);
+                    }
+
                 }
                 else{
                     new AlertDialog.Builder(this)
