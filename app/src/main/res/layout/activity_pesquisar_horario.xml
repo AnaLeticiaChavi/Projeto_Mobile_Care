@@ -6,51 +6,62 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="mobilecare.app.PesquisarHorario">
+    tools:context="mobilecare.app.PesquisarHorario"
+    android:background="#006F9D">
 
-    <TextView
-        android:id="@+id/textPesquisarHorario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pesquisa de Horário"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+    <ScrollView android:id="@+id/ScrlViewPesquisarHorario" android:layout_width="fill_parent" android:layout_height="fill_parent" >
 
-    <EditText
-        android:id="@+id/txtPesquisaNomeMedHorario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
-        android:ems="10"
-        android:hint="Nome do Medicamento"
-        android:layout_below="@+id/textPesquisarHorario"
-        android:layout_alignRight="@+id/textPesquisarHorario"
-        android:layout_alignEnd="@+id/textPesquisarHorario">
+        <LinearLayout android:id="@+id/layoutForScrollPesquisarHorario" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
 
-        <requestFocus />
-    </EditText>
 
-    <Button
-        android:id="@+id/btnPesqHorBD"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pesquisar"
-        android:layout_alignBottom="@+id/txtPesquisaNomeMedHorario"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+            <EditText
+                android:id="@+id/txtPesquisaNomeMedHorario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Nome do Medicamento"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal"
+                android:textColorHint="#FFFFFF">
 
-    <EditText
-        android:id="@+id/txtSaidaPesqHor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:layout_below="@+id/btnPesqHorBD"
-        android:layout_alignRight="@+id/btnPesqHorBD"
-        android:layout_alignEnd="@+id/btnPesqHorBD"
-        android:layout_alignLeft="@+id/txtPesquisaNomeMedHorario"
-        android:layout_alignStart="@+id/txtPesquisaNomeMedHorario" />
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/btnPesqHorBD"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pesquisar"
+                android:layout_alignBottom="@+id/txtPesquisaNomeMedHorario"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="20dp"
+                android:background="#8DCACB"
+                android:layout_gravity="center_horizontal" />
+
+            <EditText
+                android:id="@+id/txtSaidaPesqHor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:layout_below="@+id/btnPesqHorBD"
+                android:layout_alignRight="@+id/btnPesqHorBD"
+                android:layout_alignEnd="@+id/btnPesqHorBD"
+                android:layout_alignLeft="@+id/txtPesquisaNomeMedHorario"
+                android:layout_alignStart="@+id/txtPesquisaNomeMedHorario"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>

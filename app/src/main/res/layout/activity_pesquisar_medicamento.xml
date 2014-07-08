@@ -6,50 +6,61 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="mobilecare.app.PesquisarMedicamento">
+    tools:context="mobilecare.app.PesquisarMedicamento"
+    android:background="#006F9D">
 
-    <TextView
-        android:id="@+id/textPesquisarMedicamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
-        android:text="Pesquisa de Medicamento" />
+    <ScrollView android:id="@+id/ScrlViewPesquisarMedicamento" android:layout_width="fill_parent" android:layout_height="fill_parent" >
 
-    <EditText
-        android:id="@+id/txtPesquisaNomeMedicamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textPesquisarMedicamento"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="27dp"
-        android:ems="10"
-        android:hint="Nome do Medicamento" >
+        <LinearLayout android:id="@+id/layoutForScrollPesquisarMedicamento" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:weightSum="1">
 
-        <requestFocus />
-    </EditText>
 
-    <Button
-        android:id="@+id/btnPesqMedBD"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtPesquisaNomeMedicamento"
-        android:layout_toRightOf="@+id/txtPesquisaNomeMedicamento"
-        android:text="Pesquisar" />
+            <EditText
+                android:id="@+id/txtPesquisaNomeMedicamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="27dp"
+                android:ems="10"
+                android:hint="Nome do Medicamento"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal"
+                android:textColorHint="#FFFFFF">
 
-    <EditText
-        android:id="@+id/txtSaidaPesqMed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtPesquisaNomeMedicamento"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/btnPesqMedBD"
-        android:layout_below="@+id/txtPesquisaNomeMedicamento"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:editable="true" />
+                <requestFocus />
+            </EditText>
+
+            <Button
+                android:id="@+id/btnPesqMedBD"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txtPesquisaNomeMedicamento"
+                android:layout_toRightOf="@+id/txtPesquisaNomeMedicamento"
+                android:text="Pesquisar"
+                android:background="#8DCACB"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal" />
+
+            <EditText
+                android:id="@+id/txtSaidaPesqMed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/txtPesquisaNomeMedicamento"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/btnPesqMedBD"
+                android:layout_below="@+id/txtPesquisaNomeMedicamento"
+                android:layout_marginTop="30dp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:editable="true"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>

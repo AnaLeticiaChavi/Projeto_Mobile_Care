@@ -6,100 +6,128 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="mobilecare.app.RemoverHorario">
+    tools:context="mobilecare.app.RemoverHorario"
+    android:background="#006F9D">
 
-    <TextView
-        android:id="@+id/txtRemoverMedicamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="111dp"
-        android:layout_marginTop="26dp"
-        android:text="Remover Medicamento" />
+    <ScrollView android:id="@+id/ScrlViewRemoverHorario" android:layout_width="fill_parent" android:layout_height="fill_parent" >
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtPesNomeMedExcluir"
-        android:layout_marginTop="48dp"
-        android:hint="Nome do Medicamento"
-        android:layout_below="@+id/txtRemoverMedicamento"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <LinearLayout android:id="@+id/layoutForScrollRemoverHorario" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtTituloExcluir"
-        android:layout_below="@+id/txtPesNomeMedExcluir"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="36dp"
-        android:hint="Titulo"
-        android:layout_alignRight="@+id/txtPesNomeMedExcluir"
-        android:layout_alignEnd="@+id/txtPesNomeMedExcluir" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtDataExcluir"
-        android:hint="Data"
-        android:layout_below="@+id/txtTituloExcluir"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/txtTituloExcluir"
-        android:layout_alignEnd="@+id/txtTituloExcluir" />
+            <EditText
+                android:layout_width="338dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPesNomeMedExcluir"
+                android:layout_marginTop="48dp"
+                android:hint="Nome do Medicamento"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/btnPesqNomeMedExcluir"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal"
+                android:textColorHint="#FFFFFF" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtHoraExcluir"
-        android:hint="Hora"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/txtDataExcluir"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/txtTituloExcluir"
-        android:layout_alignEnd="@+id/txtTituloExcluir" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ok"
+                android:id="@+id/btnPesqNomeMedExcluir"
+                android:singleLine="true"
+                android:layout_alignTop="@+id/txtPesNomeMedExcluir"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="20dp"
+                android:background="#8DCACB"
+                android:layout_gravity="center_horizontal" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtPeriodoExcluir"
-        android:layout_below="@+id/txtHoraExcluir"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:hint="Periodo"
-        android:layout_alignRight="@+id/txtHoraExcluir"
-        android:layout_alignEnd="@+id/txtHoraExcluir" />
+            <EditText
+                android:layout_width="368dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTituloExcluir"
+                android:layout_below="@+id/txtPesNomeMedExcluir"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="36dp"
+                android:hint="Titulo"
+                android:layout_alignRight="@+id/txtPesNomeMedExcluir"
+                android:layout_alignEnd="@+id/txtPesNomeMedExcluir"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="left"
+                android:textColorHint="#FFFFFF" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtNomeMedExc"
-        android:layout_below="@+id/txtPeriodoExcluir"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:hint="Nome do medicamento" />
+            <EditText
+                android:layout_width="369dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtDataExcluir"
+                android:hint="Data"
+                android:layout_below="@+id/txtTituloExcluir"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/txtTituloExcluir"
+                android:layout_alignEnd="@+id/txtTituloExcluir"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="left"
+                android:textColorHint="#FFFFFF" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remover"
-        android:id="@+id/btnRemoverHor"
-        android:layout_below="@+id/txtNomeMedExc"
-        android:layout_alignRight="@+id/txtNomeMedExc"
-        android:layout_alignEnd="@+id/txtNomeMedExc"
-        android:layout_marginTop="46dp" />
+            <EditText
+                android:layout_width="368dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtHoraExcluir"
+                android:hint="Hora"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/txtDataExcluir"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@+id/txtTituloExcluir"
+                android:layout_alignEnd="@+id/txtTituloExcluir"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="left"
+                android:textColorHint="#FFFFFF" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ok"
-        android:id="@+id/btnPesqNomeMedExcluir"
-        android:singleLine="true"
-        android:layout_alignBottom="@+id/txtPesNomeMedExcluir"
-        android:layout_toRightOf="@+id/txtRemoverMedicamento" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPeriodoExcluir"
+                android:layout_below="@+id/txtHoraExcluir"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Periodo"
+                android:layout_alignRight="@+id/txtHoraExcluir"
+                android:layout_alignEnd="@+id/txtHoraExcluir"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="left"
+                android:textColorHint="#FFFFFF" />
+
+            <EditText
+                android:layout_width="338dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtNomeMedExc"
+                android:layout_below="@+id/txtPeriodoExcluir"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:hint="Nome do medicamento"
+                android:textColor="#FFFFFF"
+                android:layout_alignRight="@+id/txtPeriodoExcluir"
+                android:layout_alignEnd="@+id/txtPeriodoExcluir"
+                android:layout_gravity="center_horizontal"
+                android:textColorHint="#FFFFFF" />
+
+            <Button
+                android:layout_width="153dp"
+                android:layout_height="wrap_content"
+                android:text="Remover"
+                android:id="@+id/btnRemoverHor"
+                android:textSize="20dp"
+                android:background="#8DCACB"
+                android:layout_below="@+id/txtNomeMedExc"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </RelativeLayout>
 

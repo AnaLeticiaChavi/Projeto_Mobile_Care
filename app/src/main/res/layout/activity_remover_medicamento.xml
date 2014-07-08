@@ -6,111 +6,140 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="mobilecare.app.RemoverMedicamento">
+    tools:context="mobilecare.app.RemoverMedicamento"
+    android:background="#006F9D">
 
-    <TextView
-        android:id="@+id/txtRemocaoDeMedicamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:text="Remover Medicamento" />
+    <ScrollView android:id="@+id/ScrlViewRemoverMedicamento" android:layout_width="fill_parent" android:layout_height="fill_parent" >
 
-    <Button
-        android:id="@+id/btnRemoveMedBD"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OK"
-        android:layout_alignTop="@+id/txtNomeRemoveMed"
-        android:layout_toRightOf="@+id/txtRemocaoDeMedicamento" />
+        <LinearLayout android:id="@+id/layoutForScrollRemoverMedicamento" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
 
-    <EditText
-        android:id="@+id/txtNomeRemoveMed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="73dp"
-        android:ems="10"
-        android:hint="Nome do Medicamento"
-        android:layout_below="@+id/txtRemocaoDeMedicamento"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+            <EditText
+                android:id="@+id/txtNomeRemoveMed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="73dp"
+                android:ems="10"
+                android:hint="Nome do Medicamento"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/btnRemoveMedBD"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal"
+                android:textColorHint="#FFFFFF">
 
 
 
-        <requestFocus />
-    </EditText>
+                <requestFocus />
+            </EditText>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtNomeMedREM"
-        android:hint="Nome do Medicamento"
-        android:layout_above="@+id/txtDosagemMedREM"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <Button
+                android:id="@+id/btnRemoveMedBD"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:layout_alignTop="@+id/txtNomeRemoveMed"
+                android:layout_toRightOf="@+id/btnREMMed"
+                android:background="#8DCACB"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/txtDosagemMedREM"
-        android:hint="Dosagem"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtNomeMedREM"
+                android:hint="Nome do Medicamento"
+                android:layout_above="@+id/txtDosagemMedREM"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/txtDataIniMedREM"
-        android:layout_alignParentStart="true"
-        android:hint="Data de Inicio"
-        android:layout_below="@+id/txtDosagemMedREM"
-        android:layout_alignParentLeft="true" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/txtDosagemMedREM"
+                android:hint="Dosagem"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="left"
+                android:textColorHint="#FFFFFF" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/txtDataFimMedREM"
-        android:layout_alignEnd="@+id/txtDosagemMedREM"
-        android:hint="Data de Fim"
-        android:layout_below="@+id/txtDataIniMedREM"
-        android:layout_alignParentLeft="true" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/txtDataIniMedREM"
+                android:layout_alignParentStart="true"
+                android:hint="Data de Inicio"
+                android:layout_below="@+id/txtDosagemMedREM"
+                android:layout_alignParentLeft="true"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="left"
+                android:textColorHint="#FFFFFF" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtTarjaMedREM"
-        android:layout_alignParentStart="true"
-        android:hint="Tarja"
-        android:layout_alignEnd="@+id/txtDataFimMedREM"
-        android:layout_below="@+id/txtDataFimMedREM"
-        android:layout_alignParentLeft="true" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:ems="10"
+                android:id="@+id/txtDataFimMedREM"
+                android:layout_alignEnd="@+id/txtDosagemMedREM"
+                android:hint="Data de Fim"
+                android:layout_below="@+id/txtDataIniMedREM"
+                android:layout_alignParentLeft="true"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="left"
+                android:textColorHint="#FFFFFF" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtObsMedREM"
-        android:layout_alignParentStart="true"
-        android:hint="Obs"
-        android:layout_alignEnd="@+id/txtTarjaMedREM"
-        android:layout_below="@+id/txtTarjaMedREM"
-        android:layout_alignParentLeft="true" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtTarjaMedREM"
+                android:layout_alignParentStart="true"
+                android:hint="Tarja"
+                android:layout_alignEnd="@+id/txtDataFimMedREM"
+                android:layout_below="@+id/txtDataFimMedREM"
+                android:layout_alignParentLeft="true"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="left"
+                android:textColorHint="#FFFFFF" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remover"
-        android:id="@+id/btnREMMed"
-        android:hint="Remover"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtObsMedREM"
+                android:layout_alignParentStart="true"
+                android:hint="Obs"
+                android:layout_alignEnd="@+id/txtTarjaMedREM"
+                android:layout_below="@+id/txtTarjaMedREM"
+                android:layout_alignParentLeft="true"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="left"
+                android:textColorHint="#FFFFFF" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remover"
+                android:id="@+id/btnREMMed"
+                android:hint="Remover"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#8DCACB"
+                android:textSize="20dp"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </RelativeLayout>

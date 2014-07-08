@@ -1,62 +1,80 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="mobilecare.app.MenuPrincipal">
-
-    <TextView
-        android:id="@+id/txtMenuPrincipal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
-        android:text="Menu Principal" />
+    tools:context="mobilecare.app.MenuPrincipal"
+    android:background="#006F9D">
 
     <Button
         android:id="@+id/btnMedicamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtMenuPrincipal"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="47dp"
-        android:text="Manter Medicamentos" />
+        android:text="Medicamentos"
+        android:background="#8DCACB"
+        android:textSize="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/btnHorario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Manter Horários"
+        android:text="Horários"
         android:layout_below="@+id/btnMedicamento"
         android:layout_alignLeft="@+id/btnMedicamento"
         android:layout_alignStart="@+id/btnMedicamento"
         android:layout_alignRight="@+id/btnMedicamento"
-        android:layout_alignEnd="@+id/btnMedicamento" />
+        android:layout_alignEnd="@+id/btnMedicamento"
+        android:background="#8DCACB"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btnEstoque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Manter Estoque"
+        android:text="Estoque"
         android:layout_alignStart="@+id/btnHorario"
         android:layout_below="@+id/btnHorario"
         android:layout_alignLeft="@+id/btnMedicamento"
         android:layout_alignRight="@+id/btnMedicamento"
-        android:layout_alignEnd="@+id/btnMedicamento" />
+        android:layout_alignEnd="@+id/btnMedicamento"
+        android:background="#8DCACB"
+        android:textSize="20dp" />
 
     <Button
-        android:id="@+id/btnRelatorio"
+        android:id="@+id/btnRelatorioMxM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gerar Relatórios"
+        android:text="Medicamento tomados em um mês"
         android:layout_alignStart="@+id/btnEstoque"
         android:layout_below="@+id/btnEstoque"
         android:layout_alignLeft="@+id/btnMedicamento"
         android:layout_alignRight="@+id/btnMedicamento"
-        android:layout_alignEnd="@+id/btnMedicamento" />
+        android:layout_alignEnd="@+id/btnMedicamento"
+        android:background="#8DCACB"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRelatorioDxM"
+        android:layout_below="@+id/btnRelatorioMxM"
+        android:layout_alignLeft="@+id/btnRelatorioMxM"
+        android:layout_alignStart="@+id/btnRelatorioMxM"
+        android:text="Dosagem total x Mês"
+        android:layout_alignRight="@+id/btnRelatorioMxM"
+        android:layout_alignEnd="@+id/btnRelatorioMxM"
+        android:background="#8DCACB"
+        android:layout_gravity="bottom"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

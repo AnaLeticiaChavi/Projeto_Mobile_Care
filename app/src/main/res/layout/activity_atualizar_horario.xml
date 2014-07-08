@@ -6,29 +6,21 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="mobilecare.app.AtualizarHorario">
+    tools:context="mobilecare.app.AtualizarHorario"
+    android:background="#006F9D">
 
-    <TextView
-        android:id="@+id/txtAtualizarMedicamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="111dp"
-        android:layout_marginTop="26dp"
-        android:text="Atualizar Horário"
-        android:layout_alignParentStart="false" />
 
     <EditText
         android:id="@+id/txtNomeMedAtualizarHorario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/txtAtualizarMedicamento"
         android:layout_marginLeft="18dp"
         android:layout_marginTop="18dp"
         android:ems="10"
-        android:hint="Nome do medicamento" >
+        android:hint="Nome do medicamento"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF">
 
         <requestFocus />
     </EditText>
@@ -38,10 +30,10 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/txtNomeMedAtualizarHorario"
+        android:text="OK"
         android:layout_alignBottom="@+id/txtNomeMedAtualizarHorario"
-        android:layout_toRightOf="@+id/txtAtualizarMedicamento"
-        android:text="OK" />
+        android:layout_toRightOf="@+id/txtNomeMedAtualizarHorario"
+        android:background="#8DCACB" />
 
     <EditText
         android:id="@+id/txtTituloAtualiza"
@@ -50,7 +42,9 @@
         android:layout_below="@+id/btnAtualizacaoHorario"
         android:layout_toLeftOf="@+id/btnAtualizacaoHorario"
         android:ems="10"
-        android:hint="Titulo" />
+        android:hint="Titulo"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
 
     <EditText
         android:id="@+id/txtDataAtualizaHorario"
@@ -60,7 +54,9 @@
         android:hint="Data"
         android:layout_below="@+id/txtTituloAtualiza"
         android:layout_alignLeft="@+id/txtTituloAtualiza"
-        android:layout_alignStart="@+id/txtTituloAtualiza" />
+        android:layout_alignStart="@+id/txtTituloAtualiza"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
 
     <EditText
         android:id="@+id/txtHoraAtualiza"
@@ -69,8 +65,10 @@
         android:ems="10"
         android:hint="Hora"
         android:layout_below="@+id/txtDataAtualizaHorario"
-        android:layout_alignRight="@+id/txtAtualizarMedicamento"
-        android:layout_alignEnd="@+id/txtAtualizarMedicamento" />
+        android:layout_alignLeft="@+id/txtNomeMedAtualizarHorario"
+        android:layout_alignStart="@+id/txtNomeMedAtualizarHorario"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
 
     <EditText
         android:id="@+id/txtPeriodoAtualiza"
@@ -79,7 +77,9 @@
         android:layout_below="@+id/txtHoraAtualiza"
         android:layout_toLeftOf="@+id/btnAtualizacaoHorario"
         android:ems="10"
-        android:hint="Periodo" />
+        android:hint="Periodo"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
 
     <EditText
         android:id="@+id/txtMedAtualizaHor"
@@ -88,7 +88,9 @@
         android:layout_below="@+id/txtPeriodoAtualiza"
         android:layout_toLeftOf="@+id/btnAtualizacaoHorario"
         android:ems="10"
-        android:hint="Nome do Medicamento" />
+        android:hint="Nome do Medicamento"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
 
     <Button
         android:id="@+id/btnAtualizaHorBD"
@@ -98,6 +100,8 @@
         android:layout_below="@+id/txtMedAtualizaHor"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
-        android:text="Atualizar" />
+        android:text="Atualizar"
+        android:background="#8DCACB"
+        android:textSize="20dp" />
 
 </RelativeLayout>

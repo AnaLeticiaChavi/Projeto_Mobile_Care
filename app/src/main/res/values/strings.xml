@@ -22,5 +22,9 @@
     <string name="title_activity_pesquisar_estoque">PesquisarEstoque</string>
     <string name="title_activity_atualizar_estoque">AtualizarEstoque</string>
     <string name="title_activity_remover_estoque">RemoverEstoque</string>
+    <string name="title_activity_medicamentox_mesmo">MedicamentoxMesmo</string>
+    <string name="title_activity_dosagemx_mes">DosagemxMes</string>
+    <string name="title_activity_teste__alarme">TESTE_ALARME</string>
+    <string name="title_activity_my_alarm_service">MyAlarmService</string>
 
 </resources>

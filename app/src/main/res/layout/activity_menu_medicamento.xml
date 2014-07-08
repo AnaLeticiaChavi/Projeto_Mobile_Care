@@ -6,60 +6,57 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="mobilecare.app.MenuMedicamento">
-
-    <TextView
-        android:id="@+id/txtMenuMedicamento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="Menu de Medicamentos" />
+    tools:context="mobilecare.app.MenuMedicamento"
+    android:background="#006F9D">
 
     <Button
         android:id="@+id/btnCadastrarMedicamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtMenuMedicamento"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="76dp"
-        android:text="Cadastrar novo Medicamento" />
+        android:text="Cadastrar novo Medicamento"
+        android:background="#8DCACB"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btnPesquisarMedicamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pesquisar Medicamentos"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/btnCadastrarMedicamento"
         android:layout_alignLeft="@+id/btnCadastrarMedicamento"
         android:layout_alignStart="@+id/btnCadastrarMedicamento"
         android:layout_alignRight="@+id/btnCadastrarMedicamento"
-        android:layout_alignEnd="@+id/btnCadastrarMedicamento" />
+        android:layout_alignEnd="@+id/btnCadastrarMedicamento"
+        android:background="#8DCACB"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btnAtualizarMedicamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnPesquisarMedicamento"
-        android:layout_marginTop="30dp"
         android:text="Atualizar Medicamento"
+        android:layout_below="@+id/btnPesquisarMedicamento"
+        android:layout_alignRight="@+id/btnPesquisarMedicamento"
+        android:layout_alignEnd="@+id/btnPesquisarMedicamento"
         android:layout_alignLeft="@+id/btnPesquisarMedicamento"
         android:layout_alignStart="@+id/btnPesquisarMedicamento"
-        android:layout_alignRight="@+id/btnCadastrarMedicamento"
-        android:layout_alignEnd="@+id/btnCadastrarMedicamento" />
+        android:background="#8DCACB"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btnRemoverMedicamento"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnAtualizarMedicamento"
-        android:layout_marginTop="25dp"
         android:text="Remover Medicamento"
+        android:layout_below="@+id/btnAtualizarMedicamento"
         android:layout_alignLeft="@+id/btnAtualizarMedicamento"
         android:layout_alignStart="@+id/btnAtualizarMedicamento"
         android:layout_alignRight="@+id/btnAtualizarMedicamento"
-        android:layout_alignEnd="@+id/btnAtualizarMedicamento" />
+        android:layout_alignEnd="@+id/btnAtualizarMedicamento"
+        android:background="#8DCACB"
+        android:textSize="20dp" />
 
 
 </RelativeLayout>

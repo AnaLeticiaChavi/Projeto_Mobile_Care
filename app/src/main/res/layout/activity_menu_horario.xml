@@ -6,16 +6,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="mobilecare.app.MenuHorario">
-
-    <TextView
-        android:id="@+id/txtMenuHorario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="Menu de Horários" />
+    tools:context="mobilecare.app.MenuHorario"
+    android:background="#006F9D">
 
     <Button
         android:id="@+id/btnCadastrarHorario"
@@ -24,7 +16,9 @@
         android:layout_below="@+id/txtMenuMedicamento"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="76dp"
-        android:text="Cadastrar novo Horário" />
+        android:text="Cadastrar novo Horário"
+        android:background="#8DCACB"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btnPesquisarHorario"
@@ -36,7 +30,9 @@
         android:layout_alignLeft="@+id/btnCadastrarHorario"
         android:layout_alignStart="@+id/btnCadastrarHorario"
         android:layout_alignRight="@+id/btnCadastrarHorario"
-        android:layout_alignEnd="@+id/btnCadastrarHorario" />
+        android:layout_alignEnd="@+id/btnCadastrarHorario"
+        android:background="#8DCACB"
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/btnAtualizarHorario"
@@ -48,7 +44,9 @@
         android:layout_alignLeft="@+id/btnPesquisarHorario"
         android:layout_alignStart="@+id/btnPesquisarHorario"
         android:layout_alignRight="@+id/btnPesquisarHorario"
-        android:layout_alignEnd="@+id/btnPesquisarHorario" />
+        android:layout_alignEnd="@+id/btnPesquisarHorario"
+        android:background="#8DCACB"
+        android:textSize="20dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -60,7 +58,9 @@
         android:layout_alignLeft="@+id/btnAtualizarHorario"
         android:layout_alignStart="@+id/btnAtualizarHorario"
         android:layout_alignRight="@+id/btnAtualizarHorario"
-        android:layout_alignEnd="@+id/btnAtualizarHorario" />
+        android:layout_alignEnd="@+id/btnAtualizarHorario"
+        android:background="#8DCACB"
+        android:textSize="20dp" />
 
 
 </RelativeLayout>
